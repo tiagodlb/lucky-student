@@ -4,7 +4,7 @@ services:
     container_name: db_postgres_students
     restart: always
     ports:
-      - 5032:5432
+      - 2345:5432
     env_file:
       - .env
     volumes:
@@ -14,10 +14,15 @@ services:
     container_name: node_students
     build: .
     ports:
-      - 5002:5000
+      - 5000:5000
     depends_on:
       - db_postgres_students
     env_file:
       - .env
 volumes:
   pg:
+
+
+networks:
+  students_network:
+    driver: bridge

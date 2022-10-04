@@ -6,6 +6,8 @@ COPY . .
 
 EXPOSE 5000
 
-RUN npm i && npm run build && npx prisma generate
+RUN npm i
 
-CMD ["npm", "start"]
+RUN npx prisma generate
+
+CMD ["npm", "run", "dev"]
