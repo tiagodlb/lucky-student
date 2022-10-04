@@ -12,4 +12,4 @@ export default {
     "^(\\.{1,2}/.*)\\.js$": "$1",
   },
   testRegex: "tests/.*\\.ts$"
-};
+}; 
